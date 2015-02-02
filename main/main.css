@@ -1,0 +1,55 @@
+* {
+	margin:0;
+	padding:0;	
+	border:0;
+}
+
+body {
+	font-family: Arial;
+	background-color: black;
+	color: white;
+	overflow:hidden;
+}
+
+#main {
+	height: 3px;
+	border: 1px solid white;
+	overflow:hidden;
+}
+#three {
+	height: 3px;
+	margin-top: 2px;
+	margin-left: 2px;
+	margin-right: 2px;
+	border: 1px dotted cyan;
+}
+#fifty {
+	height: 3px;
+	margin-top: 45px;
+	margin-left: 45px;
+	margin-right: 45px;
+	border: 1px dotted pink;
+}
+#canvas {
+	position:absolute;
+	top:0;
+	left:0;
+	width:100px;
+	height:100px;
+	color:white;
+}
+#resolution,#logo {
+	position:absolute;
+	top:0;
+	font-size: 100px;
+	color: rgba(255,255,255,0.1);
+	left:0;
+	display:none;
+}
+#sync {
+	display:block;
+	position:absolute;
+	width:20px;
+	height:20px;
+	background-color: white;
+}
