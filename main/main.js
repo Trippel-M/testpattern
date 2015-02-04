@@ -66,16 +66,19 @@ $(function() {
 		// Draw circle
 		ctx.beginPath();
 		ctx.strokeStyle="#00FF00";
+
 		if ($(window).height() < $(window).width()) {
 			xy = $(window).height()/2
 		} else {
 			xy = $(window).width()/2
 		}
+
 		ctx.arc(
 			$(window).width()/2,
 			($(window).height()/2) - 3,
 			xy-53,0,2*Math.PI
 		);
+
 		ctx.stroke();
 
 		var id = ctx.createImageData(1,1);
@@ -112,15 +115,63 @@ $(function() {
 		}
 
 
-
-		// Aspect lines
+		// Feature: Draw Center lines 
+		// Centerlines
 
 		var h = $(window).height();
 		var w = $(window).width();
 
-		if (h > w) {
-		
-		}		
+		var center_h = h/2;
+		var center_w = w/2;
+
+		ctx.beginPath();
+		ctx.strokeStyle="#FF00FF";
+
+		// Horizontal Centerline
+		ctx.moveTo(0,center_h);
+		ctx.lineTo(w,center_h);
+
+		// Vertical Centerline
+		ctx.moveTo(center_w,0);
+		ctx.lineTo(center_w,h);
+
+		// Add Color
+		ctx.stroke();
+
+
+
+
+
+
+		// Feature: Draw Diagonal Center lines 
+
+		var h = $(window).height();
+		var w = $(window).width();
+
+		ctx.beginPath();
+		ctx.strokeStyle="#FFFF00";
+
+		// Horizontal Centerline
+		ctx.moveTo(0,0);
+		ctx.lineTo(w,h);
+
+		// Vertical Centerline
+		ctx.moveTo(w,0);
+		ctx.lineTo(0,h);
+
+		// Add Color
+		ctx.stroke();
+
+
+
+
+
+
+
+
+
+
+
 
 
 
